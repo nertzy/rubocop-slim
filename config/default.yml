@@ -175,6 +175,10 @@ Style/ParallelAssignment:
   Exclude:
     - '**/*.slim'
 
+Style/RedundantParentheses:
+  Exclude:
+    - '**/*.slim'
+
 Style/RescueModifier:
   Exclude:
     - '**/*.slim'
