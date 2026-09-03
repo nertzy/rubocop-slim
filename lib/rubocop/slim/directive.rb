@@ -2,13 +2,15 @@
 
 module RuboCop
   module Slim
-    RubyClip = Class.new(
+    Directive = Class.new(
       if defined?(::Data) && ::Data.respond_to?(:define)
-        ::Data.define(:code, :offset)
+        ::Data.define(:marker_offset, :line_start, :marker, :text)
       else
         ::Struct.new(
-          :code,
-          :offset,
+          :marker_offset,
+          :line_start,
+          :marker,
+          :text,
           keyword_init: true
         )
       end
